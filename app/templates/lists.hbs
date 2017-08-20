@@ -1,0 +1,11 @@
+<div class="lists-container">
+  {{#each lists as |list|}}
+    {{list-view 
+      list=list
+    }}
+  {{/each}}
+</div>
+<div class="global-btn blue new-list-button" onclick={{action 'createList'}}>
+  <i class="ion-icon ion-plus-round"></i>
+  <span>New List</span>
+</div>

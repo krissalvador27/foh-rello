@@ -7,6 +7,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('index', { path: '/' });
+  this.route('lists', { path: '/lists' });
+
 });
 
 export default Router;

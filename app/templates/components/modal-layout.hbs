@@ -1,0 +1,9 @@
+<div class="global-modal {{if rendered 'show'}}">
+  <div class="modal-content">
+    <div class="modal-header">
+      <i class="ion-icon ion-close-round pull-left" onclick={{action 'closeModal'}}></i>
+    </div>
+    {{yield}}
+  </div>
+</div>
+

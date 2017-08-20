@@ -1,0 +1,33 @@
+// Main app & index
+body {
+  background-color: $neutral;
+  color: $primary;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0px;
+}
+
+.index-container {
+  margin-top: 200px;
+}
+
+.main-nav {
+  background-color: $blue;
+  height: 3em;
+
+  h3.logo {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 16px;
+  }
+
+  .main-nav__left,
+  .main-nav__right {
+    display: flex;
+  }
+
+  .main-nav__right {
+    flex-direction: row-reverse;
+  }
+}

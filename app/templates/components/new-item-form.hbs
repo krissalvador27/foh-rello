@@ -1,0 +1,32 @@
+<div class="title-input">
+  <label>Title</label>
+  {{input 
+    type='text'
+    placeholder='This is my item\'s title'
+    classNames='form-input'
+    value=newItemTitle
+    maxlength=50
+  }}
+</div>
+<div class="color-input">
+  <label>Color</label>
+  <div class="color-choice orange {{if selectedOrange 'selected'}}" {{action 'toggleColor' 'orange'}}></div>
+  <div class="color-choice green {{if selectedGreen 'selected'}}" {{action 'toggleColor' 'green'}}></div>
+  <div class="color-choice red {{if selectedRed 'selected'}}" {{action 'toggleColor' 'red'}}></div>
+</div>
+<div class="description-input">
+  <label>Description</label>
+  {{textarea 
+    placeholder='This is my item\'s description'
+    classNames='form-textarea no-resize'
+    value=newItemDescription
+    wrap=true
+    spellcheck=true
+    rows=4
+    maxlength=450
+  }}
+</div>
+<div class="footer">
+  <div class="btn green {{if disableSaveButton 'disabled'}}" {{action 'saveNewItem'}}>Save</div>
+  <div class="btn red" {{action 'resetAddNewItem'}}>Cancel</div>
+</div>

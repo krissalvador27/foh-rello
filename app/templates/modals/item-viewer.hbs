@@ -1,0 +1,28 @@
+{{#modal-layout}}
+  <div class="item-viewer">
+    <div class="title">
+      <label>Title</label>
+      {{inline-editor
+        value=item.title
+        maxLength=50
+        onSave=(action 'saveTitle')
+      }}
+    </div>
+    <div class="description">
+      <label>Description</label>
+      {{inline-editor
+        value=item.description
+        maxLength=450
+        type='textarea'
+        textareaRows=5
+        classNames='full-width'
+        onSave=(action 'saveDescription')
+      }}
+    </div>
+
+    <div class="btn-group">
+      <div class="btn red" onclick={{action 'delete'}}>Delete</div>
+      <div class="btn blue" onclick={{action 'closeModal'}}>Done</div>
+    </div>
+  </div>
+{{/modal-layout}}

@@ -1,0 +1,37 @@
+.item-viewer {
+  display: flex;
+  min-width: 400px;
+  min-height: 200px;
+  flex-direction: column;
+
+  .title,
+  .description {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+
+    label {
+      color: $blue;
+      font-weight: 600;
+      margin-left: 16px;
+      text-transform: uppercase;
+    }
+  }
+
+  .description {
+    margin-bottom: 8px;
+  }
+  
+  .btn-group {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    border-top: 1px solid $carbon;
+
+    .btn {
+      flex: 0;
+      margin: 0px 16px;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.list-view-container {
+  background-color: $carbon;
+  border-radius: 4px;
+  margin: 8px;
+  max-height: 800px;
+  max-width: 400px;
+  min-height: 450px;
+  overflow-x: hidden;
+
+  .items-view {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 8px 16px;
+
+    .add-item {
+      margin-top: 16px;
+      opacity: 1;
+      transition: all 750ms ease;
+
+      &.hide {
+        opacity: 0;
+        margin-left: -600px;
+      }
+    }
+  }
+}

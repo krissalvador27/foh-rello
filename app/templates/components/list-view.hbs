@@ -1,0 +1,24 @@
+<div class="list-view-container">
+  {{inline-editor
+    value=list.title
+    onSave=(action 'saveNewTitle')
+  }}
+  <div class="items-view">
+    {{#each list.items as |item|}}
+      {{item-card item=item}}
+    {{else}}
+      {{!-- Empty state --}}
+      <div class="empty-state text-center">
+        <h2 class="shrug">¯\_(ツ)_/¯</h2>
+        <p>Your '{{list.title}}' is looking a little empty<br>
+        Let's add some cards!</p>
+      </div>
+    {{/each}}
+    <div class="add-item btn blue" {{action 'showAddItem'}}>Add</div>
+    {{new-item-form
+      list=list
+      onSaveNewItem=(action 'resetAddNewItem')
+      onCancelNewItem=(action 'resetAddNewItem')
+    }}
+  </div>
+</div>

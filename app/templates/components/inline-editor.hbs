@@ -1,0 +1,25 @@
+<div class="inline-editor {{if editing 'is-editing'}} {{if isTextarea 'using-textarea'}}">
+  {{#if editing}}
+    {{#if isInput}}
+      {{input 
+        type='text'
+        classNames='form-input'
+        value=editableValue
+        maxlength=maxLength
+      }}
+    {{else}}
+      {{textarea
+        type='text'
+        classNames='form-textarea no-resize'
+        value=editableValue
+        maxLength=maxLength
+        rows=textareaRows
+      }}
+    {{/if}}
+    <div class="btn red" onclick={{action 'cancel'}}>Cancel</div>
+    <div class="btn green {{if disableSaveButton 'disabled'}}" onclick={{action 'save'}}>Save</div>
+  {{else}}
+    <h3>{{value}}</h3>
+    <i class="ion-icon ion-edit" onclick={{action 'toggleEdit'}}></i>
+  {{/if}}
+</div>
