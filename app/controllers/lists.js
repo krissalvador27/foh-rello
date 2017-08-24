@@ -12,6 +12,7 @@ export default Ember.Controller.extend({
       });
 
       this.get('lists').pushObject(newList);
+      newList.save();
     }
 
   }
