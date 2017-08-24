@@ -4,7 +4,8 @@ A lightweight application that's similar to trello but not (it's a work in progr
 
 ## TODO
 
-- [ ] Drag and drop cards
+- [x] Drag and drop cards onto other lists
+- [ ] Drag cards to reorder
 - [ ] Ability to edit color
 - [ ] Currently uses local storage DB so perhaps an API layer w/ saved user state
 - [ ] Become a better trello (tentative)
